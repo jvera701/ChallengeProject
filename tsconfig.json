@@ -1,3 +1,11 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json"
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "lib": [
+      "esnext"
+    ] /* Specify library files to be included in the compilation. */,
+    "baseUrl": "./" /* Base directory to resolve non-absolute module names. */
+  },
+  "include": ["src"], // existing
+  "exclude": ["node_modules", "ios", "android"]
 }
