@@ -36,7 +36,7 @@ const styles = StyleSheet.create<Styles>({
   },
   numberStyle: {
     color: 'white',
-    fontSize: scaleSize(14),
+    fontSize: scaleSize(16),
   },
   innerContainer: {
     flex: 1,

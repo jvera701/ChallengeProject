@@ -29,14 +29,3 @@ export const images = [
     source: require('../core/assets/milo.jpeg'),
   },
 ];
-
-export const ImageListData = [
-  ImageList.DeTodito,
-  ImageList.Milo,
-  ImageList.DeTodito,
-  ImageList.Alqueria,
-  ImageList.Milo,
-  ImageList.Alqueria,
-  ImageList.Alqueria,
-  ImageList.DeTodito,
-];

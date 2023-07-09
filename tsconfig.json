@@ -4,7 +4,7 @@
     "lib": [
       "esnext"
     ] /* Specify library files to be included in the compilation. */,
-    "baseUrl": "./" /* Base directory to resolve non-absolute module names. */
+    "baseUrl": "." /* Base directory to resolve non-absolute module names. */
   },
   "include": ["src"], // existing
   "exclude": ["node_modules", "ios", "android"]

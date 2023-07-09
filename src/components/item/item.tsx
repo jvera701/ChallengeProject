@@ -5,7 +5,7 @@ import { images, ImageList, scaleSize } from '../../core/constants';
 
 type ItemProps = {
   name: ImageList;
-  quantity?: number;
+  quantity: number;
   onPress: () => void;
 };
 
@@ -24,12 +24,12 @@ const Item = (props: ItemProps) => {
       <View
         style={[
           styles.innerContainer,
-          quantity !== undefined ? styles.purpleBorder : styles.grayBorder,
+          quantity !== 0 ? styles.purpleBorder : styles.grayBorder,
           dimensions,
         ]}
       >
         <ImageBackground source={findImage?.source} style={[styles.image]}>
-          {quantity !== undefined && (
+          {quantity !== 0 && (
             <View style={styles.circle}>
               <Text style={styles.numberStyle}>{quantity}</Text>
             </View>

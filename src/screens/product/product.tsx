@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, SafeAreaView } from 'react-native';
 import styles from './product.styles';
 
 type ProductScreenProps = {
@@ -9,10 +9,10 @@ type ProductScreenProps = {
 const ProductScreen = (props: ProductScreenProps) => {
   const { navigation } = props;
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text>{'Hello'}</Text>
       <Text onPress={() => navigation.goBack()}>{'Go back'}</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
