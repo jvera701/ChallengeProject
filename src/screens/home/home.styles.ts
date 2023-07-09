@@ -1,5 +1,5 @@
 import { ViewStyle, StyleSheet, TextStyle } from 'react-native';
-import { scaleSize } from './src/core/constants';
+import { scaleSize } from '../../core/constants';
 interface Styles {
   container: ViewStyle;
   purpleLine: ViewStyle;
