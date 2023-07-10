@@ -20,4 +20,4 @@ export const listSlice = createSlice({
 });
 
 export const { changeAmount } = listSlice.actions;
-export default listSlice.reducer;
+export const listReducer = listSlice.reducer;

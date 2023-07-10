@@ -14,7 +14,7 @@ type ProductScreenProps = {
 const ProductScreen = (props: ProductScreenProps) => {
   const { navigation, route } = props;
   const { index } = route.params;
-  const { list } = useAppSelector(state => state.list);
+  const { list } = useAppSelector(state => state.listReducer);
   const product = list[index];
   const findImage = images.find(image => image.name === product.name);
   const [quantity, setQuantity] = React.useState(product.quantity);

@@ -15,7 +15,7 @@ type itemData = {
 
 const ShoppingCartScreen = (props: ShoppingCartScreenProps) => {
   const { navigation } = props;
-  const { list } = useAppSelector(state => state.list);
+  const { list } = useAppSelector(state => state.listReducer);
   const newList = list.filter(element => element.quantity > 0);
   const usdToCop = 2000;
   const totalSum = newList.reduce(

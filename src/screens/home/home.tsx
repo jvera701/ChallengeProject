@@ -16,7 +16,7 @@ type itemData = {
 
 const HomeScreen = (props: HeroScreenProps) => {
   const { navigation } = props;
-  const { list } = useAppSelector(state => state.list);
+  const { list } = useAppSelector(state => state.listReducer);
   const totalSum = list.reduce(
     (accumulator, currentValue) =>
       accumulator + currentValue.price * currentValue.quantity,
