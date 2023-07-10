@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/home/home';
 import ProductScreen from '../screens/product/product';
 import ShoppingCartScreen from '../screens/shopping-cart/shopping-cart';
+import PaymentWebviewScreen from '../screens/payment-webview/payment-webview';
 
 const RootStack = createNativeStackNavigator();
 const navTheme = {
@@ -29,6 +30,10 @@ const AppNavigation = () => {
         <RootStack.Screen
           name="Shopping Screen"
           component={ShoppingCartScreen}
+        />
+        <RootStack.Screen
+          name="Payment Screen"
+          component={PaymentWebviewScreen}
         />
       </RootStack.Navigator>
     </NavigationContainer>

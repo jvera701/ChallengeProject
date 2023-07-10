@@ -1,5 +1,4 @@
 import React from 'react';
-//import { useAppSelector } from '../../store/hooks';
 import styles from './shopping-card.styles';
 import { SafeAreaView, FlatList, View, Text, Pressable } from 'react-native';
 import { ShoppingItem, Title } from '../../components/index';
@@ -18,6 +17,7 @@ const ShoppingCartScreen = (props: ShoppingCartScreenProps) => {
   const { navigation } = props;
   const { list } = useAppSelector(state => state.list);
   const newList = list.filter(element => element.quantity > 0);
+  const usdToCop = 2000;
   const totalSum = newList.reduce(
     (accumulator, currentValue) =>
       accumulator + currentValue.price * currentValue.quantity,
@@ -36,9 +36,19 @@ const ShoppingCartScreen = (props: ShoppingCartScreenProps) => {
           <Text style={styles.grayText}>{'Total: '}</Text>
           <Text style={styles.purpleText}>{`$${totalSum}`}</Text>
         </View>
-        <Pressable style={styles.buttonContainer}>
+        <Pressable
+          style={styles.buttonContainer}
+          onPress={() =>
+            navigation.navigate('Payment Screen', {
+              totalPrice: totalSum * usdToCop * 100,
+            })
+          }
+        >
           <Text style={styles.payText}>{'Ir a wompi'}</Text>
         </Pressable>
+        <Text style={styles.grayText}>
+          {`Nota: como ejemplo, el dólar esta a ${usdToCop}`}
+        </Text>
       </View>
     );
   };
