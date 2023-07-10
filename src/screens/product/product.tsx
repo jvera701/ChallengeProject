@@ -45,11 +45,15 @@ const ProductScreen = (props: ProductScreenProps) => {
             <Text style={styles.numberStyle}>{quantity}</Text>
           </View>
         )}
+
         <Image source={findImage?.source} style={styles.imageStyle} />
       </View>
       <View style={styles.bottomRow}>
         <View style={styles.mainView}>
           <Text style={styles.boldedText}>{product.name}</Text>
+          <View style={styles.purpleDotContainer}>
+            <View style={styles.purpleDot} />
+          </View>
           <Text style={styles.purplePrice}>{`$${
             quantity * product.price
           }`}</Text>
@@ -73,8 +77,8 @@ const ProductScreen = (props: ProductScreenProps) => {
       </View>
       <Text style={styles.grayBottomText}>{product.description}</Text>
       <View style={styles.purpleLine} />
-      <Pressable onPress={() => saveAndGoBack()}>
-        <Text>{'Save and go back'}</Text>
+      <Pressable onPress={() => saveAndGoBack()} style={styles.bottomButton}>
+        <Text style={styles.saveText}>{'Save and go back'}</Text>
       </Pressable>
     </SafeAreaView>
   );

@@ -18,6 +18,10 @@ interface Styles {
   plusTextColor: TextStyle;
   grayBottomText: TextStyle;
   purpleLine: ViewStyle;
+  bottomButton: ViewStyle;
+  saveText: TextStyle;
+  purpleDot: ViewStyle;
+  purpleDotContainer: ViewStyle;
 }
 
 const styles = StyleSheet.create<Styles>({
@@ -28,7 +32,7 @@ const styles = StyleSheet.create<Styles>({
   },
   mainView: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
   },
   circle: {
     height: scaleSize(40),
@@ -50,6 +54,7 @@ const styles = StyleSheet.create<Styles>({
   bottomRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    paddingTop: scaleSize(10),
     paddingBottom: scaleSize(8),
     borderBottomColor: 'purple',
     borderBottomWidth: scaleSize(1),
@@ -57,12 +62,12 @@ const styles = StyleSheet.create<Styles>({
   boldedText: {
     color: 'black',
     fontWeight: 'bold',
-    fontSize: scaleSize(16),
+    fontSize: scaleSize(18),
   },
   purplePrice: {
     color: 'purple',
     fontWeight: 'bold',
-    fontSize: scaleSize(16),
+    fontSize: scaleSize(18),
   },
   button: {
     width: scaleSize(30),
@@ -94,6 +99,30 @@ const styles = StyleSheet.create<Styles>({
     width: '100%',
     height: scaleSize(1),
     backgroundColor: 'purple',
+  },
+  bottomButton: {
+    backgroundColor: 'purple',
+    width: scaleSize(200),
+    padding: scaleSize(5),
+    marginTop: scaleSize(10),
+    borderRadius: scaleSize(4),
+    alignItems: 'center',
+  },
+  saveText: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: scaleSize(20),
+  },
+  purpleDot: {
+    backgroundColor: '#fab3ff',
+    height: scaleSize(6),
+    width: scaleSize(6),
+    borderRadius: scaleSize(6 / 2),
+  },
+  purpleDotContainer: {
+    width: scaleSize(20),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 export default styles;

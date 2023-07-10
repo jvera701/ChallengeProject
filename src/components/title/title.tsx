@@ -6,16 +6,20 @@ type TitleProps = {
   name: string;
   totalCost?: number;
   useMaxHeight?: boolean;
+  onPress?: () => void;
 };
 
 const Title = (props: TitleProps) => {
-  const { name, totalCost, useMaxHeight = false } = props;
+  const { name, totalCost, useMaxHeight = false, onPress } = props;
   return (
     <View style={[styles.container, useMaxHeight && styles.giveMaxHeight]}>
       <View style={styles.topView}>
         <Text style={styles.title}>{name}</Text>
         {totalCost !== undefined && (
-          <Pressable style={styles.purpleButton}>
+          <Pressable
+            style={styles.purpleButton}
+            onPress={() => onPress !== undefined && onPress()}
+          >
             <Text style={styles.innerText}>{`$${totalCost}`}</Text>
           </Pressable>
         )}

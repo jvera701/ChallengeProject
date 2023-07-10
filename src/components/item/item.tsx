@@ -20,7 +20,11 @@ const Item = (props: ItemProps) => {
   };
 
   return (
-    <Pressable onPress={onPress} style={[dimensions, styles.container]}>
+    <Pressable
+      onPress={onPress}
+      style={[dimensions, styles.container]}
+      testID="press-container"
+    >
       <View
         style={[
           styles.innerContainer,
