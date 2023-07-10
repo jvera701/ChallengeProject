@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 To run the project locally you need this:
 
-- [NodeJS](https://nodejs.org/en/) now using v18.16.0
+- [NodeJS](https://nodejs.org/en/) now using v18.16.1
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
 - [CocoaPods with homebrew](https://formulae.brew.sh/formula/cocoapods) Now using v 1.12.1
 - Xcode >= 14.0 ( Required MacOs >= 12.6)
@@ -52,4 +52,7 @@ To run tests
 npm run test
 ```
 
----
+## Sample Usability Gifs
+
+![Usability 1](gifs/Usability1.gif)
+![Usability 2](gifs/Usability2.gif)
