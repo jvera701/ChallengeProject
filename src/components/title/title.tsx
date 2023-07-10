@@ -15,10 +15,11 @@ const Title = (props: TitleProps) => {
     <View style={[styles.container, useMaxHeight && styles.giveMaxHeight]}>
       <View style={styles.topView}>
         <Text style={styles.title}>{name}</Text>
-        {totalCost !== undefined && (
+        {totalCost !== undefined && onPress !== undefined && (
           <Pressable
             style={styles.purpleButton}
-            onPress={() => onPress !== undefined && onPress()}
+            onPress={() => onPress()}
+            testID="cost-button"
           >
             <Text style={styles.innerText}>{`$${totalCost}`}</Text>
           </Pressable>
