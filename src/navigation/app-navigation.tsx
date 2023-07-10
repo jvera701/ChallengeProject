@@ -3,6 +3,7 @@ import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/home/home';
 import ProductScreen from '../screens/product/product';
+import ShoppingCartScreen from '../screens/shopping-cart/shopping-cart';
 
 const RootStack = createNativeStackNavigator();
 const navTheme = {
@@ -24,7 +25,11 @@ const AppNavigation = () => {
           component={HomeScreen}
           options={{ headerShown: false }}
         />
-        <RootStack.Screen name="ProductScreen" component={ProductScreen} />
+        <RootStack.Screen name="Product Screen" component={ProductScreen} />
+        <RootStack.Screen
+          name="Shopping Screen"
+          component={ShoppingCartScreen}
+        />
       </RootStack.Navigator>
     </NavigationContainer>
   );

@@ -19,7 +19,7 @@ const HomeScreen = (props: HeroScreenProps) => {
   const { list } = useAppSelector(state => state.list);
   const totalSum = list.reduce(
     (accumulator, currentValue) =>
-      accumulator + currentValue.price + currentValue.quantity,
+      accumulator + currentValue.price * currentValue.quantity,
     0,
   );
 
@@ -29,7 +29,7 @@ const HomeScreen = (props: HeroScreenProps) => {
       <Item
         name={item.name}
         onPress={() => {
-          navigation.navigate('ProductScreen', { index: index });
+          navigation.navigate('Product Screen', { index: index });
         }}
         quantity={item.quantity}
       />
@@ -42,7 +42,13 @@ const HomeScreen = (props: HeroScreenProps) => {
         data={list}
         numColumns={2}
         renderItem={renderItem}
-        ListHeaderComponent={<Title name="Store" totalCost={totalSum} />}
+        ListHeaderComponent={
+          <Title
+            name="Store"
+            totalCost={totalSum}
+            onPress={() => navigation.navigate('Shopping Screen')}
+          />
+        }
       />
     </SafeAreaView>
   );
