@@ -1,10 +1,9 @@
 import React from 'react';
-import Item from '../../components/item/item';
 import { SafeAreaView, FlatList } from 'react-native';
 import styles from './home.styles';
 import { useAppSelector } from '../../store/hooks';
 import { itemType } from 'src/store/initialState';
-import Title from '../../components/title/title';
+import { Item, Title } from '../../components/index';
 
 type HeroScreenProps = {
   navigation: any;

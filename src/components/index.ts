@@ -1,2 +1,3 @@
 import Item from './item/item';
-export { Item };
+import Title from './title/title';
+export { Item, Title };

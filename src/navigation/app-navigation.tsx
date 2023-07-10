@@ -16,10 +16,14 @@ const AppNavigation = () => {
   return (
     <NavigationContainer theme={navTheme}>
       <RootStack.Navigator
-        screenOptions={{ headerShown: false, gestureEnabled: false }}
+        screenOptions={{ gestureEnabled: false }}
         initialRouteName="Home"
       >
-        <RootStack.Screen name="Home" component={HomeScreen} />
+        <RootStack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ headerShown: false }}
+        />
         <RootStack.Screen name="ProductScreen" component={ProductScreen} />
       </RootStack.Navigator>
     </NavigationContainer>

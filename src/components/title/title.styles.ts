@@ -6,6 +6,8 @@ interface Styles {
   topView: ViewStyle;
   purpleButton: ViewStyle;
   innerText: TextStyle;
+  container: ViewStyle;
+  giveMaxHeight: ViewStyle;
 }
 
 const styles = StyleSheet.create<Styles>({
@@ -36,6 +38,13 @@ const styles = StyleSheet.create<Styles>({
   },
   innerText: {
     color: 'white',
+  },
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+  },
+  giveMaxHeight: {
+    maxHeight: scaleSize(40),
   },
 });
 

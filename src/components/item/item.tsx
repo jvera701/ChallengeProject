@@ -28,7 +28,7 @@ const Item = (props: ItemProps) => {
           dimensions,
         ]}
       >
-        <ImageBackground source={findImage?.source} style={[styles.image]}>
+        <ImageBackground source={findImage?.source} style={styles.image}>
           {quantity !== 0 && (
             <View style={styles.circle}>
               <Text style={styles.numberStyle}>{quantity}</Text>
